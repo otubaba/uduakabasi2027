@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDUAK-ABASI 2027</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/7.jpeg">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+    
+        <header class="fixed top-0 left-0 w-full text-gray-600 body-font shadow-md bg-white z-50">
+  <div class="container mx-auto flex flex-wrap p-5 items-center justify-between">
+
+    <!-- LOGO -->
+    <a class="flex items-center text-gray-900">
+      <img src="images/1.jpeg" alt="" class="h-12 w-12 rounded-full object-cover">
+    </a>
+
+    <!-- HAMBURGER (mobile only) -->
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- NAV + BUTTON -->
+    <div id="menu" class="hidden w-full md:flex md:items-center md:w-auto">
+
+      <!-- NAV -->
+      <nav class="flex flex-col md:flex-row md:ml-auto md:space-x-2 mt-4 md:mt-0">
+        <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="index.html">HOME</a>
+        <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="about.html">ABOUT</a>
+        <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="empowerments.html">EMPOWERMENTS</a>
+        <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="vision.html">THE VISION</a>
+      </nav>
+
+      <!-- BUTTON -->
+      <div class="mt-4 md:mt-0 md:ml-4">
+        <a href="join.html" class="inline-flex items-center bg-gray-100 px-4 py-2 rounded-lg hover:bg-gray-500 hover:text-white transition">
+          Join Us
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+        </header>
+
+        <main class="flex-grow pt-[8rem] sm:pt-[10rem] md:pt-[6rem] lg:pt-[8rem]">
+         <section class="relative py-12 px-4">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('images/1.jpeg');"></div>
+
+  <!-- Form container -->
+  <div class="relative max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8">
+    
+    <!-- Title -->
+    <div class="heading flex flex-col items-center text-center px-4">
+
+        <img 
+            src="images/1.jpeg" 
+            alt="Youth Interest Logo" 
+            class="w-20 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-auto mb-4 object-contain"
+        >
+
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+           JOIN UDUAK-ABASI 2027
+        </h2>
+
+    </div>
+
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- First Name -->
+      <div>
+        <label class="block text-gray-700 mb-2">First Name</label>
+        <input type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Last Name -->
+      <div>
+        <label class="block text-gray-700 mb-2">Last Name</label>
+        <input type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Address -->
+      <div class="md:col-span-2">
+        <label class="block text-gray-700 mb-2">Address</label>
+        <input type="text" class="w-full border border-gray-300 rounded-lg p-3">
+      </div>
+
+      <!-- LGA -->
+      <div>
+        <label class="block text-gray-700 mb-2">LGA</label>
+        <select id="lga" onchange="updateWards()" class="w-full border border-gray-300 rounded-lg p-3">
+          <option value="">Select LGA</option>
+          <option value="ETINAN">ETINAN</option>
+          <option value="NSIT IBOM">NSIT IBOM</option>
+          <option value="NSIT UBIUM">NSIT UBIUM</option>
+        </select>
+      </div>
+
+      <!-- Ward -->
+      <div>
+        <label class="block text-gray-700 mb-2">Ward</label>
+        <select id="ward" class="w-full border border-gray-300 rounded-lg p-3">
+          <option>Select Ward</option>
+        </select>
+      </div>
+
+      <!-- Village -->
+      <div>
+        <label class="block text-gray-700 mb-2">Village</label>
+        <input type="text" class="w-full border border-gray-300 rounded-lg p-3">
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label class="block text-gray-700 mb-2">Phone Number</label>
+        <input type="tel" class="w-full border border-gray-300 rounded-lg p-3">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-gray-700 mb-2">Email</label>
+        <input type="email" class="w-full border border-gray-300 rounded-lg p-3">
+      </div>
+
+      <!-- DOB -->
+      <div>
+        <label class="block text-gray-700 mb-2">Date of Birth</label>
+        <input type="date" class="w-full border border-gray-300 rounded-lg p-3">
+      </div>
+
+      <!-- Area of Interest (Radio - single select) -->
+      <div class="md:col-span-2">
+        <label class="block text-gray-700 mb-3">Area of Interest</label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="interest" class="text-blue-500">
+            <span>Business Support</span>
+          </label>
+
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="interest" class="text-blue-500">
+            <span>ICT Training</span>
+          </label>
+
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="interest" class="text-blue-500">
+            <span>Education Support</span>
+          </label>
+
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="interest" class="text-blue-500">
+            <span>Support for Elderly</span>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="md:col-span-2 text-center mt-6">
+        <button class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition">
+          Register
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+        </main>
+<!-- footer -->
+
+    <footer class="text-gray-600 body-font bg-gray-100 border-t">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+      <img src="images/1.jpeg" alt="logo" class="h-10 w-auto ml-3">
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2026 SHEILDOEB — <span class="italic">Designed by</span>
+      <a href="https://otubaba.github.io/engrBasseyO/" 
+        class="text-gray-900 ml-1 px-2 py-1 rounded hover:bg-gray-200 transition"
+        rel="noopener noreferrer" 
+        target="_blank">
+        Engr._Otuekong_Bassey
+      </a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+    </footer>
+<script>
+  // Select all nav links
+  const navLinks = document.querySelectorAll('header nav a');
+
+  // Get current page filename
+  let currentPage = window.location.pathname.split('/').pop();
+  if (!currentPage) currentPage = 'index.html'; // default for homepage
+
+  navLinks.forEach(link => {
+    let href = link.getAttribute('href');
+
+    // Map your special cases: e.g., The Vision page
+    if (href === '#') href = 'join.html'; // update this to match your actual page
+
+    // Compare
+    if (href === currentPage) {
+      link.classList.add('bg-gray-500', 'text-white'); // highlight active tab
+    } else {
+      link.classList.remove('bg-gray-500', 'text-white'); // remove highlight if needed
+    }
+  });
+</script>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  const navLinkss = document.querySelectorAll('#menu a');
+
+  // Toggle menu when hamburger is clicked
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Hide menu when a link is clicked (mobile UX)
+  navLinkss.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>
+
+<!-- JavaScript for Dynamic Ward Selection -->
+<script>
+  const wards = {
+    "ETINAN": [
+      "ETINAN URBAN I","ETINAN URBAN II","ETINAN URBAN III","ETINAN URBAN IV","ETINAN URBAN V",
+      "SOUTHERN IMAN I","SOUTHERN IMAN II","SOUTHERN IMAN III","SOUTHERN IMAN IV",
+      "NORTHERN IMAN I","NORTHERN IMAN II"
+    ],
+    "NSIT IBOM": [
+      "ASANG I","ASANG II","ASANG III","ASANG IV","ASANG V",
+      "MBAISO I","MBAISO II","MBAISO III","MBAISO IV","MBAISO V"
+    ],
+    "NSIT UBIUM": [
+      "IBIAKPAN/OBOTIM II","IBIAKPAN OBOTIM I","ITRETO","NDIYA",
+      "UBIUM NORTH I","UBIUM NORTH II","UBIUM NORTH III",
+      "UBIUM SOUTH I","UBIUM SOUTH II","UBIUM SOUTH III"
+    ]
+  };
+
+  function updateWards() {
+    const lga = document.getElementById("lga").value;
+    const wardSelect = document.getElementById("ward");
+
+    wardSelect.innerHTML = "<option>Select Ward</option>";
+
+    if (wards[lga]) {
+      wards[lga].forEach(ward => {
+        const option = document.createElement("option");
+        option.value = ward;
+        option.textContent = ward;
+        wardSelect.appendChild(option);
+      });
+    }
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/c27acce84b.js" ></script>
+</body>
+</html>
