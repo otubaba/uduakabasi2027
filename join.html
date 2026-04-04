@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body class="flex flex-col min-h-screen">
     
@@ -52,122 +53,136 @@
         </header>
 
         <main class="flex-grow pt-[8rem] sm:pt-[10rem] md:pt-[6rem] lg:pt-[8rem]">
-         <section class="relative py-12 px-4">
-  <!-- Background image -->
-  <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('images/1.jpeg');"></div>
+ 
+          <section class="relative py-10 px-4">
+  
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-[url('images/1.jpeg')] bg-cover bg-center bg-no-repeat"></div>
 
-  <!-- Form container -->
+  <!-- Optional Overlay (for better readability) -->
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+
+  <!-- Content -->
   <div class="relative max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8">
     
     <!-- Title -->
     <div class="heading flex flex-col items-center text-center px-4">
+      <img 
+        src="images/1.jpeg" 
+        alt="Youth Interest Logo" 
+        class="w-20 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-auto mb-4 object-contain"
+      >
 
-        <img 
-            src="images/1.jpeg" 
-            alt="Youth Interest Logo" 
-            class="w-20 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-auto mb-4 object-contain"
-        >
-
-        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-           JOIN UDUAK-ABASI 2027
-        </h2>
-
+      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+        UDUAK-ABASI 2027 REGISTRATION
+      </h2>
     </div>
-
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form class="space-y-6">
 
       <!-- First Name -->
-      <div>
-        <label class="block text-gray-700 mb-2">First Name</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Last Name -->
-      <div>
-        <label class="block text-gray-700 mb-2">Last Name</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <!-- Name -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-gray-700 mb-1">First Name</label>
+          <input type="text" placeholder="Enter first name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-gray-700 mb-1">Last Name</label>
+          <input type="text" placeholder="Enter last name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
       </div>
 
       <!-- Address -->
-      <div class="md:col-span-2">
-        <label class="block text-gray-700 mb-2">Address</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg p-3">
+      <div>
+        <label class="block text-gray-700 mb-1">Address</label>
+        <input type="text" placeholder="Enter your address" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- LGA -->
-      <div>
-        <label class="block text-gray-700 mb-2">LGA</label>
-        <select id="lga" onchange="updateWards()" class="w-full border border-gray-300 rounded-lg p-3">
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+        <label for="lga" class="block text-gray-700 mb-1">Local Government Area (LGA)</label>
+        <select id="lga" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
           <option value="">Select LGA</option>
           <option value="ETINAN">ETINAN</option>
-          <option value="NSIT IBOM">NSIT IBOM</option>
-          <option value="NSIT UBIUM">NSIT UBIUM</option>
+          <option value="NSIT_IBOM">NSIT IBOM</option>
+          <option value="NSIT_UBIUM">NSIT UBIUM</option>
+        </select>
+      </div>
+      <div>
+        <label for="ward" class="block text-gray-700 mb-1">Ward</label>
+        <select id="ward" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <option value="" >Select Ward</option>
+        </select>
+      </div>
+       </div>
+      
+
+      <!-- Ward -->
+      
+
+      <!-- Polling Unit -->
+      <div class="md:col-span-2">
+        <label for="pu" class="block text-gray-700 mb-1">Polling Unit</label>
+        <select id="pu" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <option value="">Select Polling Unit</option>
         </select>
       </div>
 
-      <!-- Ward -->
+      <!-- VIN -->
       <div>
-        <label class="block text-gray-700 mb-2">Ward</label>
-        <select id="ward" class="w-full border border-gray-300 rounded-lg p-3">
-          <option>Select Ward</option>
-        </select>
+        <label for="vin" class="block text-gray-700 mb-1">VIN Number</label>
+        <input id="vin" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
 
       <!-- Village -->
       <div>
-        <label class="block text-gray-700 mb-2">Village</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg p-3">
+        <label for="village" class="block text-gray-700 mb-1">Village</label>
+        <input id="village" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
 
       <!-- Phone -->
       <div>
-        <label class="block text-gray-700 mb-2">Phone Number</label>
-        <input type="tel" class="w-full border border-gray-300 rounded-lg p-3">
+        <label for="phone" class="block text-gray-700 mb-1">Phone Number</label>
+        <input id="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
 
       <!-- Email -->
       <div>
-        <label class="block text-gray-700 mb-2">Email</label>
-        <input type="email" class="w-full border border-gray-300 rounded-lg p-3">
+        <label for="email" class="block text-gray-700 mb-1">Email</label>
+        <input id="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- DOB -->
-      <div>
-        <label class="block text-gray-700 mb-2">Date of Birth</label>
-        <input type="date" class="w-full border border-gray-300 rounded-lg p-3">
-      </div>
-
-      <!-- Area of Interest (Radio - single select) -->
       <div class="md:col-span-2">
-        <label class="block text-gray-700 mb-3">Area of Interest</label>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          
+        <label for="dob" class="block text-gray-700 mb-1">Date of Birth</label>
+        <input id="dob" type="date" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-2">Area of Interest:</label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" >
           <label class="flex items-center space-x-2">
-            <input type="radio" name="interest" class="text-blue-500">
+            <input type="radio" name="interest" value="Business" class="text-blue-500">
             <span>Business Support</span>
           </label>
-
           <label class="flex items-center space-x-2">
-            <input type="radio" name="interest" class="text-blue-500">
-            <span>ICT Training</span>
+            <input type="radio" name="interest" value="ICT" class="text-blue-500">
+            <span>ICT Trainings</span>
           </label>
-
           <label class="flex items-center space-x-2">
-            <input type="radio" name="interest" class="text-blue-500">
+            <input type="radio" name="interest" value="Education Support" class="text-blue-500">
             <span>Education Support</span>
           </label>
-
           <label class="flex items-center space-x-2">
-            <input type="radio" name="interest" class="text-blue-500">
+            <input type="radio" name="interest" value="Support for Elderly" class="text-blue-500">
             <span>Support for Elderly</span>
           </label>
-
         </div>
       </div>
 
       <!-- Submit -->
-      <div class="md:col-span-2 text-center mt-6">
-        <button class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition">
+      <div class="text-center">
+        <button type="submit" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">
           Register
         </button>
       </div>
@@ -175,49 +190,44 @@
     </form>
   </div>
 </section>
-        </main>
+
+
+  </main>
 <!-- footer -->
 
     <footer class="text-gray-600 body-font bg-gray-100 border-t">
-  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+  <div class="container px-5 py-8 mx-auto flex flex-row flex-wrap items-center justify-center text-center gap-6">
+    
+  <!-- Logo -->
+  <a class="flex items-center justify-center text-gray-900">
+    <img src="images/1.jpeg" alt="logo" class="h-10 w-auto">
+  </a>
 
-      <img src="images/1.jpeg" alt="logo" class="h-10 w-auto ml-3">
-    </a>
-    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2026 SHEILDOEB — <span class="italic">Designed by</span>
-      <a href="https://otubaba.github.io/engrBasseyO/" 
-        class="text-gray-900 ml-1 px-2 py-1 rounded hover:bg-gray-200 transition"
-        rel="noopener noreferrer" 
-        target="_blank">
-        Engr._Otuekong_Bassey
-      </a>
-    </p>
-    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a class="text-gray-500">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-          <circle cx="4" cy="4" r="2" stroke="none"></circle>
-        </svg>
-      </a>
-    </span>
+  <!-- Copyright -->
+  <p class="text-sm text-gray-500">
+    © 2026 SHEILDOEB — <span class="italic">Designed by</span>
+  </p>
+   <div class="flex flex-col items-center justify-center text-center gap-2">
+    <i class="fa-solid fa-hand-point-right text-blue-500 text-lg"></i>
+    <p class="text-sm text-gray-500">Our portfolio</p>
   </div>
-    </footer>
+  <!-- Designer Card -->
+  <div class="bg-white shadow-lg rounded-xl p-3 hover:shadow-xl transition rounded hover:bg-gray-500">
+    <a href="https://otubaba.github.io/engrBasseyO/" 
+       class="text-gray-900 font-medium px-3 py-2 rounded hover:bg-gray-100 transition block"
+       rel="noopener noreferrer" 
+       target="_blank">
+       Engr._Otuekong_Bassey
+    </a>      
+  </div>
+
+  <!-- Love -->
+  <p class="text-gray-700 text-sm">
+    with <i class="fa fa-heart text-red-500 mx-1">Love</i>
+  </p>
+
+</div>
+</footer>
 <script>
   // Select all nav links
   const navLinks = document.querySelectorAll('header nav a');
@@ -260,41 +270,9 @@
 </script>
 
 <!-- JavaScript for Dynamic Ward Selection -->
-<script>
-  const wards = {
-    "ETINAN": [
-      "ETINAN URBAN I","ETINAN URBAN II","ETINAN URBAN III","ETINAN URBAN IV","ETINAN URBAN V",
-      "SOUTHERN IMAN I","SOUTHERN IMAN II","SOUTHERN IMAN III","SOUTHERN IMAN IV",
-      "NORTHERN IMAN I","NORTHERN IMAN II"
-    ],
-    "NSIT IBOM": [
-      "ASANG I","ASANG II","ASANG III","ASANG IV","ASANG V",
-      "MBAISO I","MBAISO II","MBAISO III","MBAISO IV","MBAISO V"
-    ],
-    "NSIT UBIUM": [
-      "IBIAKPAN/OBOTIM II","IBIAKPAN OBOTIM I","ITRETO","NDIYA",
-      "UBIUM NORTH I","UBIUM NORTH II","UBIUM NORTH III",
-      "UBIUM SOUTH I","UBIUM SOUTH II","UBIUM SOUTH III"
-    ]
-  };
 
-  function updateWards() {
-    const lga = document.getElementById("lga").value;
-    const wardSelect = document.getElementById("ward");
-
-    wardSelect.innerHTML = "<option>Select Ward</option>";
-
-    if (wards[lga]) {
-      wards[lga].forEach(ward => {
-        const option = document.createElement("option");
-        option.value = ward;
-        option.textContent = ward;
-        wardSelect.appendChild(option);
-      });
-    }
-  }
 </script>
-
+<script src="script.js"></script>
 <script src="https://kit.fontawesome.com/c27acce84b.js" ></script>
 </body>
 </html>
