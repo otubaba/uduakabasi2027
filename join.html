@@ -38,6 +38,7 @@
         <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="about.html">ABOUT</a>
         <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="empowerments.html">EMPOWERMENTS</a>
         <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="vision.html">THE VISION</a>
+        <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="contact.html">CONTACT US</a>
       </nav>
 
       <!-- BUTTON -->
@@ -77,32 +78,32 @@
         UDUAK-ABASI 2027 REGISTRATION
       </h2>
     </div>
-    <form class="space-y-6">
+    <form id="registrationForm" class="space-y-6">
 
       <!-- First Name -->
       <!-- Name -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="block text-gray-700 mb-1">First Name</label>
-          <input type="text" placeholder="Enter first name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input name="firstName" type="text" placeholder="Enter first name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div>
           <label class="block text-gray-700 mb-1">Last Name</label>
-          <input type="text" placeholder="Enter last name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input name="lastName" type="text" placeholder="Enter last name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
       </div>
 
       <!-- Address -->
       <div>
         <label class="block text-gray-700 mb-1">Address</label>
-        <input type="text" placeholder="Enter your address" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input name="address" type="text" placeholder="Enter your address" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- LGA -->
        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
         <label for="lga" class="block text-gray-700 mb-1">Local Government Area (LGA)</label>
-        <select id="lga" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <select name="lga" id="lga" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
           <option value="">Select LGA</option>
           <option value="ETINAN">ETINAN</option>
           <option value="NSIT_IBOM">NSIT IBOM</option>
@@ -111,7 +112,7 @@
       </div>
       <div>
         <label for="ward" class="block text-gray-700 mb-1">Ward</label>
-        <select id="ward" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <select name="ward" id="ward" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
           <option value="" >Select Ward</option>
         </select>
       </div>
@@ -124,7 +125,7 @@
       <!-- Polling Unit -->
       <div class="md:col-span-2">
         <label for="pu" class="block text-gray-700 mb-1">Polling Unit</label>
-        <select id="pu" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <select name="pu" id="pu" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
           <option value="">Select Polling Unit</option>
         </select>
       </div>
@@ -132,31 +133,31 @@
       <!-- VIN -->
       <div>
         <label for="vin" class="block text-gray-700 mb-1">VIN Number</label>
-        <input id="vin" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <input name="vin" id="vin" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
 
       <!-- Village -->
       <div>
         <label for="village" class="block text-gray-700 mb-1">Village</label>
-        <input id="village" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <input name="village" id="village" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
 
       <!-- Phone -->
       <div>
         <label for="phone" class="block text-gray-700 mb-1">Phone Number</label>
-        <input id="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <input name="phone" id="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
       </div>
 
       <!-- Email -->
       <div>
         <label for="email" class="block text-gray-700 mb-1">Email</label>
-        <input id="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input name="email" id="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- DOB -->
       <div class="md:col-span-2">
         <label for="dob" class="block text-gray-700 mb-1">Date of Birth</label>
-        <input id="dob" type="date" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input name="dob" id="dob" type="date" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
       <div>
         <label class="block text-gray-700 mb-2">Area of Interest:</label>
@@ -272,6 +273,38 @@
 <!-- JavaScript for Dynamic Ward Selection -->
 
 </script>
+
+<script>
+const form = document.getElementById("registrationForm");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzmeufb93PVKFHCgiV8g3zYUL2bPLJkAhfPATIOp71pY2BgiNSXhAjJlp2y7IAU9ZHuNQ/exec", {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (result.status === "duplicate") {
+      alert("You have already registered!");
+    } else {
+      alert("Registration successful!");
+      form.reset();
+    }
+
+  } catch (error) {
+    alert("Error submitting form. Try again.");
+  }
+});
+</script>
+
 <script src="script.js"></script>
 <script src="https://kit.fontawesome.com/c27acce84b.js" ></script>
 </body>
