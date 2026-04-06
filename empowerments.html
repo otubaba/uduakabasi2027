@@ -38,6 +38,7 @@
         <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="about.html">ABOUT</a>
         <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="empowerments.html">EMPOWERMENTS</a>
         <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="vision.html">THE VISION</a>
+        <a class="px-4 py-2 text-lg font-bold rounded-lg hover:bg-gray-500 hover:text-white" href="contact.html">CONTACT US</a>
       </nav>
 
       <!-- BUTTON -->
@@ -77,34 +78,53 @@
 
   </div>
 </section>
+
+        <section class="text-gray-600 body-font">
+        <div class="container mx-auto px-5 py-24 flex justify-center">
+          <!-- Card -->
+          <div class="bg-white p-8 rounded-[50px] shadow-lg max-w-4xl w-full flex flex-col items-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-500 italic">The grassrooters says 'carry GO'</h1>
+            <video controls class="rounded-[50px] w-full mb-6">
+              <source src="images/v1.mp4" type="video/mp4">
+            </video>
+            <div class="text-center lg:w-2/3 w-full">
+              <p class="mb-8 leading-relaxed text-gray-700"><span class="italic">In an equally inspiring show of solidarity, the women of the community voiced their strong endorsement of his ambition. With enthusiasm and unity, they declared, “Emem, carry go — we are behind you!” This powerful expression of support highlights the trust and belief the people, especially the women, have in his vision and leadership.</p>
+              <div class="flex justify-center">
+                <button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"><a href="empowerments.html">More</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
     <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
     <div class="flex w-full mb-20 flex-wrap">
       <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
-        The Educational Support Program.
+        The Acceptance.
       </h1>
       <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
-        Emem Jackson has given countless youths the opportunity to pursue higher education and build a better future for themselves. 
+        Since the declaration of his intention to represent the good people of Etinan Federal Constituency, Emem Jackson has continued to receive widespread acceptance and overwhelming support across communities. His vision, rooted in progress, inclusion, and people-centered leadership, has strongly resonated with the aspirations of the people.
       </p>
     </div>
     <div class="flex flex-wrap md:-m-2 -m-1">
       <div class="flex flex-wrap w-1/2">
         <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/27.jpeg">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/29.jpeg">
         </div>
         <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/18.jpeg">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/28.jpeg">
         </div>
         <div class="md:p-2 p-1 w-full">
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/28.jpeg">
+          <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/30.jpeg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/2">
         <div class="md:p-2 p-1 w-full">
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/23.jpeg">
+          <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/31.jpeg">
         </div>
         <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/16.jpeg">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/32.jpeg">
         </div>
         <div class="md:p-2 p-1 w-1/2">
           <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/24.jpeg">
@@ -114,6 +134,8 @@
   </div>
     </section>
 
+
+  
   </main>
 <!-- footer -->
 
@@ -150,6 +172,7 @@
 
 </div>
 </footer>
+
 <script>
   // Select all nav links
   const navLinks = document.querySelectorAll('header nav a');
@@ -190,6 +213,98 @@
     });
   });
 </script>
+
+<script>
+(function(){
+  emailjs.init("0jSidlRTtSxYmTr7r"); // replace
+})();
+
+
+// const form = document.getElementById("contactForm");
+// const spinner = document.getElementById("spinner");
+// const btnText = document.getElementById("btnText");
+// const modal = document.getElementById("successModal");
+
+// // Email validation
+// function validateEmail(email) {
+//   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+// }
+
+// form.addEventListener("submit", function(e) {
+//   e.preventDefault();
+
+//   const formData = new FormData(form);
+//   const data = Object.fromEntries(formData.entries());
+
+//   // Validation
+//   if (!data.name || !data.email || !data.message || !data.subject) {
+//     alert("Please fill all required fields");
+//     return;
+//   }
+
+//   if (!validateEmail(data.email)) {
+//     alert("Enter a valid email");
+//     return;
+//   }
+
+//   // Show spinner
+//   spinner.classList.remove("hidden");
+//   btnText.textContent = "Sending...";
+  
+//   emailjs.send("service_mv6jmtj", "template_pgbzlel", data)
+//     .then(() => {
+
+//       spinner.classList.add("hidden");
+//       btnText.textContent = "Send Message";
+
+//       form.reset();
+//       modal.classList.remove("hidden");
+//       modal.classList.add("flex");
+
+//     })
+//     .catch(() => {
+//       spinner.classList.add("hidden");
+//       btnText.textContent = "Send Message";
+//       alert("Failed to send message");
+//     });
+// });
+
+// // Close modal
+// function closeModal() {
+//   modal.classList.add("hidden");
+// }
+// </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("0jSidlRTtSxYmTr7r"); // paste here
+})();
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_mv6jmtj",   // paste here
+    "template_pgbzlel",  // paste here
+    this
+  )
+  .then(() => {
+    alert("Message sent successfully!");
+    form.reset();
+  })
+  .catch((error) => {
+    alert("Failed to send message");
+    console.log(error);
+  });
+});
+</script>
+
+
 
 <script src="https://kit.fontawesome.com/c27acce84b.js" ></script>
 </body>
